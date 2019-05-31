@@ -1,8 +1,8 @@
 package com.gaoyuan.springboot.demo.example.syncContainer;
 
-import com.google.common.collect.Lists;
-import com.mmall.concurrency.annoations.ThreadSafe;
+import com.gaoyuan.springboot.demo.annoations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
+import org.assertj.core.util.Lists;
 
 import java.util.Collections;
 import java.util.List;

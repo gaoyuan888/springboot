@@ -1,7 +1,7 @@
 package com.gaoyuan.springboot.demo.example.publish;
 
-import com.mmall.concurrency.annoations.NotRecommend;
-import com.mmall.concurrency.annoations.NotThreadSafe;
+import com.gaoyuan.springboot.demo.annoations.NotRecommend;
+import com.gaoyuan.springboot.demo.annoations.NotThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

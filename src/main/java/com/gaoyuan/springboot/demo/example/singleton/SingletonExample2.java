@@ -1,6 +1,7 @@
 package com.gaoyuan.springboot.demo.example.singleton;
 
-import com.mmall.concurrency.annoations.ThreadSafe;
+
+import com.gaoyuan.springboot.demo.annoations.ThreadSafe;
 
 /**
  * 饿汉模式

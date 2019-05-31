@@ -1,6 +1,6 @@
 package com.gaoyuan.springboot.demo.example.commonUnsafe;
 
-import com.mmall.concurrency.annoations.NotThreadSafe;
+import com.gaoyuan.springboot.demo.annoations.NotThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
 import java.text.SimpleDateFormat;
@@ -25,7 +25,7 @@ public class DateFormatExample1 {
         ExecutorService executorService = Executors.newCachedThreadPool();
         final Semaphore semaphore = new Semaphore(threadTotal);
         final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
-        for (int i = 0; i < clientTotal ; i++) {
+        for (int i = 0; i < clientTotal; i++) {
             executorService.execute(() -> {
                 try {
                     semaphore.acquire();

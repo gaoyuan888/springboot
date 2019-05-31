@@ -1,6 +1,6 @@
 package com.gaoyuan.springboot.demo.example.atomic;
 
-import com.mmall.concurrency.annoations.ThreadSafe;
+import com.gaoyuan.springboot.demo.annoations.ThreadSafe;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 

@@ -1,9 +1,9 @@
 package com.gaoyuan.springboot.demo.example.immutable;
 
+import com.gaoyuan.springboot.demo.annoations.ThreadSafe;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
-import com.mmall.concurrency.annoations.ThreadSafe;
 
 @ThreadSafe
 public class ImmutableExample3 {

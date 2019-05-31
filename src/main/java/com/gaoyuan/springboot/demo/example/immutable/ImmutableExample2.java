@@ -1,7 +1,7 @@
 package com.gaoyuan.springboot.demo.example.immutable;
 
+import com.gaoyuan.springboot.demo.annoations.ThreadSafe;
 import com.google.common.collect.Maps;
-import com.mmall.concurrency.annoations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Collections;

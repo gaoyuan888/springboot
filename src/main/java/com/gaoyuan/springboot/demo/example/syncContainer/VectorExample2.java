@@ -1,6 +1,7 @@
 package com.gaoyuan.springboot.demo.example.syncContainer;
 
-import com.mmall.concurrency.annoations.NotThreadSafe;
+
+import com.gaoyuan.springboot.demo.annoations.NotThreadSafe;
 
 import java.util.Vector;
 

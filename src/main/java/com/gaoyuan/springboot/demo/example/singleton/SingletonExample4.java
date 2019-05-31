@@ -1,6 +1,7 @@
 package com.gaoyuan.springboot.demo.example.singleton;
 
-import com.mmall.concurrency.annoations.NotThreadSafe;
+
+import com.gaoyuan.springboot.demo.annoations.NotThreadSafe;
 
 /**
  * 懒汉模式 -》 双重同步锁单例模式
