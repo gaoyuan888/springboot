@@ -9,12 +9,12 @@ import java.util.Arrays;
  * @date 2019/5/31 16:39
  * @desc
  */
-public class UsafePublishYao {
+public class UnsafePublishYao {
 
     public int[] array = {1, 2, 3, 4, 5};
 
     public static void main(String[] args) {
-        UsafePublishYao usafePublishYa0 = new UsafePublishYao();
+        UnsafePublishYao usafePublishYa0 = new UnsafePublishYao();
 
         System.out.println(Arrays.toString(usafePublishYa0.array));
 
