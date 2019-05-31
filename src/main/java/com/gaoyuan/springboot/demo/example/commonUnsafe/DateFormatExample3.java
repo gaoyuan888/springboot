@@ -1,6 +1,7 @@
 package com.gaoyuan.springboot.demo.example.commonUnsafe;
 
-import com.mmall.concurrency.annoations.ThreadSafe;
+
+import com.gaoyuan.springboot.demo.annoations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
@@ -13,7 +14,7 @@ import java.util.concurrent.Semaphore;
 
 @Slf4j
 @ThreadSafe
-public class DateFormatExample3 {
+public class DateFormatExample3  {
 
     // 请求总数
     public static int clientTotal = 5000;
