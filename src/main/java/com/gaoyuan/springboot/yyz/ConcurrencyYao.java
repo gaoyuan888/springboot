@@ -37,8 +37,8 @@ public class ConcurrencyYao {
                 } catch (Exception e) {
 
                 }
-                countDownLatch.countDown();
             });
+            countDownLatch.countDown();
         }
         countDownLatch.await();
         executorService.shutdown();
