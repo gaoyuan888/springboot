@@ -26,9 +26,8 @@ public class ConcurrencyYao {
 
     public static void main(String[] args) throws Exception {
         ExecutorService executorService = Executors.newCachedThreadPool();
-        final Semaphore semaphore = new Semaphore(threadTotal);
         final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
-
+        final Semaphore semaphore = new Semaphore(threadTotal);
         for (int i = 0; i < clientTotal; i++) {
             executorService.execute(() -> {
                 try {
@@ -44,7 +43,6 @@ public class ConcurrencyYao {
         countDownLatch.await();
         executorService.shutdown();
         log.info("{}", count);
-
     }
 
     private static void add() {
