@@ -23,10 +23,12 @@ public class ConcurrencyYao {
     // 同时并发执行的线程数
     public static int threadTotal = 200;
     public static int count = 0;
+
     public static void main(String[] args) throws Exception {
         ExecutorService executorService = Executors.newCachedThreadPool();
         final Semaphore semaphore = new Semaphore(threadTotal);
         final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
+
         for (int i = 0; i < clientTotal; i++) {
             executorService.execute(() -> {
                 try {
@@ -34,14 +36,15 @@ public class ConcurrencyYao {
                     add();
                     semaphore.release();
                 } catch (Exception e) {
-                    log.error("error");
+
                 }
-                countDownLatch.countDown();
             });
+            countDownLatch.countDown();
         }
-        log.info("count:{}", count);
         countDownLatch.await();
         executorService.shutdown();
+        log.info("{}", count);
+
     }
 
     private static void add() {
