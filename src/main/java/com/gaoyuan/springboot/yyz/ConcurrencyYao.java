@@ -20,12 +20,9 @@ import java.util.concurrent.Semaphore;
 public class ConcurrencyYao {
     // 请求总数
     public static int clientTotal = 5000;
-
     // 同时并发执行的线程数
     public static int threadTotal = 200;
-
     public static int count = 0;
-
     public static void main(String[] args) throws Exception {
         ExecutorService executorService = Executors.newCachedThreadPool();
         final Semaphore semaphore = new Semaphore(threadTotal);
@@ -39,13 +36,12 @@ public class ConcurrencyYao {
                 } catch (Exception e) {
                     log.error("error");
                 }
+                countDownLatch.countDown();
             });
-            countDownLatch.await();
-            executorService.shutdown();
-            log.info("count:{}", count);
         }
-
-
+        log.info("count:{}", count);
+        countDownLatch.await();
+        executorService.shutdown();
     }
 
     private static void add() {
